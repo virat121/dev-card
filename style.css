@@ -1,0 +1,80 @@
+/* ===========================================================
+   🎨 THEME COLOURS
+   Lab part 2: on your dark-mode branch, change ONLY these
+   five values. Every colour on the page comes from here.
+   =========================================================== */
+:root {
+  --bg: #e8edf4;       /* page background */
+  --card: #ffffff;     /* card background */
+  --text: #1b2230;     /* main text */
+  --muted: #5d6779;    /* secondary text */
+  --accent: #2f6fde;   /* avatar, links, skill chips */
+}
+
+/* ---------- You don't need to change anything below ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.card {
+  width: 100%;
+  max-width: 34rem;
+  background: var(--card);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2.25rem 1.75rem;
+  box-shadow: 0 1px 2px rgba(20, 30, 50, 0.06), 0 12px 40px rgba(20, 30, 50, 0.08);
+}
+
+.intro { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
+
+.avatar {
+  flex-shrink: 0;
+  width: 4.5rem; height: 4.5rem;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--accent);
+  color: var(--card);
+  font-size: 1.5rem; font-weight: 700; letter-spacing: 0.02em;
+}
+
+h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.02em; }
+.role { color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem; }
+.bio { font-size: 1.05rem; margin-bottom: 1.75rem; }
+
+section { margin-bottom: 1.5rem; }
+h2 { font-size: 1rem; margin-bottom: 0.5rem; }
+section p { color: var(--muted); }
+
+.skills { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.skills li {
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.9rem; font-weight: 600;
+}
+
+.links { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.links a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
+.links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+footer {
+  margin-top: 2rem; padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--muted) 25%, transparent);
+  color: var(--muted); font-size: 0.8rem;
+}
+
+@media (max-width: 420px) {
+  .card { padding: 1.75rem 1.25rem 1.25rem; }
+  h1 { font-size: 1.6rem; }
+  .avatar { width: 3.5rem; height: 3.5rem; font-size: 1.2rem; }
+}
